@@ -1,0 +1,30 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>
+      News Api
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-item>
+   <ion-input [(ngModel)]='topic' placeholder='Add topic..'></ion-input>
+ </ion-item>
+ <ion-button expand='block' (click)='search()' >Search</ion-button>
+
+
+ <ion-card mode='ios' *ngFor='let item of newsData'>
+  <ion-card-header>
+    <img class="newsImage" [src]="item.urlToImage">
+    <h4>
+      {{item.title}}
+    </h4>
+  </ion-card-header>
+  <ion-card-content>
+    <p>
+      {{item.description}}
+    </p>
+  </ion-card-content>
+ </ion-card>
+
+</ion-content>
