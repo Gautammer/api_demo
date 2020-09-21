@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  public apiKey:any='8b19e740f4e44f21b6e7f27270b99691';
+  public apiKey:any='YOUR_API_KEY';
   constructor(public http:HttpClient) { }
 
 
